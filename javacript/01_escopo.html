@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Escopo Javascript</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Primeiro - hoisting com var 
+        Segundo - error com let 
+        var - global variable, ou seja, vísivel para toda a aplicação
+        let e const tempo de execução  
+        const obj muda as propriedades, não variável
+        const name -> quebrou a função com mesmo nome
+        */
+
+        let name = 'batista'
+        //escopo blocos vai funcionar o log 
+        {
+            let name = 'maycon'
+            console.log(name)
+        }
+        console.log(name)
+
+        // usar export para outros locais 
+
+        const helloName = function callName() {
+            // let name = 'alves' fornecerá um erro
+            var name = 'alves'
+            // name = 'alves' atribuição de variável
+
+            console.log(name)
+        }
+        helloName()
+        // const key = 'SUCESS_KEY' não se altera
+        const car = {
+            name: 'forka',
+            color: 'red'
+        }
+        console.log(car, 'hello')
+        // proteção de dados - não manipulá-los 
+        Object.freeze(car)
+        // não funcionará devido ao freeze * 
+        car.name = 'vectra'
+        console.log(car)
+
+        // exportar ou nome global de função
+        // função é considerada como variável, mesmo que um método 
+        // novidades do browser - Babel 
+    </script>
+</body>
+
+</html>
