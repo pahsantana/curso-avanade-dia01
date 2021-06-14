@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow functions</title>
+</head>
+
+<body>
+    <button class="btn" type="button">Click me</button>
+    <script>
+        // traz apenas o primeiro elemento, se fosse querySelectorAll seria todos os elementos 
+        const btn = document.querySelector('.btn')
+        // mostra o botão
+        btn.addEventListener('click', function (event) {
+            console.log(this)
+        })
+        // this global window
+        btn.addEventListener('click', (event) => {
+            console.log(this)
+        })
+    </script>
+
+</body>
+
+</html>

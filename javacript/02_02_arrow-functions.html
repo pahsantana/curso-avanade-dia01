@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow functions</title>
+</head>
+
+<body>
+    <script>
+        function sum(num1, num2) {
+            return num1 + num2
+        }
+        // kind of Anonymous function
+        // corpo
+        const arrowSum = (num1, num2) => {
+            // if(num1<0){
+            //     return false
+            // }
+            return num1 + num2
+        }
+
+        const arrowSumOneLine = (num1, num2) => num1 + num2
+
+        console.log(sum(1, 2))
+        console.log(arrowSum(1, 2))
+        console.log(arrowSumOneLine(2, 2))
+
+        const hello = name => console.log(`Hello ${name}`)
+
+        // vazio bla
+
+        console.log(hello('Maycon'))
+
+        hello('Maycon')
+
+
+        ((var1 = 1, var2 = 2) => {
+            console.log(var1 + var2)
+        })();
+        // == só valor
+        // estrito === fracamente tipado valor e tipo
+        // styled-components CSS em JS não carregar
+        // HTML> CSS > JS mudança de páginas
+        // load page - GTM e GTO
+    </script>
+
+</body>
+
+</html>

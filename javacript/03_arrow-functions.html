@@ -1,0 +1,33 @@
+  <!DOCTYPE HTML>
+  <html lang="pt-br">
+
+  <head>
+      <meta charset="utf-8">
+      <title>Arrow functions</title>
+  </head>
+
+  <body>
+      <button class="btn">Confirmar</button>
+      <script>
+          const values = {
+              firstNumber: 10,
+              secondNumber: 20,
+
+              showValues: function () {
+                  return `Primeiro numero: ${this.firstNumber} Segundo numero: ${this.secondNumber}`
+              },
+              callShowValues: function () {
+                  window.setTimeout(function () {
+                      console.log(this)
+                  }, 2000)
+              }
+          }
+
+          const btn = document.querySelector('.btn')
+          btn.addEventListener('click', function () {
+              values.callShowValues()
+          })
+      </script>
+  </body>
+
+  </html>

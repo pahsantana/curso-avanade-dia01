@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow functions</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Conhecer o this do JS
+        Arrow function objeto global sendo estrito ou não
+
+        Document -> no browser manipular HTML
+        Window janela - completa - representar
+
+        Tanto for a como dentro de uma função
+
+        Self -> gambiarra 
+        That 
+        This
+        */
+        // representa toda classe - windows
+        function sum() {
+            console.log(this)
+        }
+        // representa apenas a Objeto pessoa dentro da função
+        const person = {
+            name: "John",
+            walk: function () {
+                console.log(this)
+            },
+            walkAction: function () {
+                console.log(this.walk())
+            }
+        }
+        console.log(person.name)
+        person.walk()
+        person.walkAction()
+        sum()
+    </script>
+
+</body>
+
+</html>
