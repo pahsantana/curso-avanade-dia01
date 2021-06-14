@@ -1,0 +1,26 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+
+  <head>
+      <meta charset="utf-8">
+      <title>Arrays</title>
+  </head>
+
+  <body>
+      <script>
+          const numbers = [0, 1, 2, 3, 4, 5, 6]
+          // achar a primeira evidência
+          const findNumber = numbers.find(number => number > 3)
+          console.log(findNumber)
+          // retorna -1 se não achar
+          // não é muiot aconselhável prefira includes
+          const findIndexNumber = numbers.findIndex(number => number > 10)
+          console.log(findIndexNumber)
+          const includeNumber = numbers.includes(3)
+          console.log(includeNumber)
+
+          console.log(numbers)
+      </script>
+  </body>
+
+  </html>

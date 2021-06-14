@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Default parameters</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [1, 2, 3, 4, 5]
+
+        console.log([...numbers, 6, 7, 8, ...numbers])
+
+        const name = 'Maycon'
+        // separa a string
+        console.log(...name)
+
+        function sum(firstNumber, secondNumber) {
+            return firstNumber + secondNumber
+        }
+
+        const number = [1, 2]
+        // concatena | consegue dividir | ignora um outro parâmetro
+        console.log(sum(...number), 'função sum')
+
+        //difference between - spread x rest parametro funcao
+        function multiply(...numbers) {
+            console.log([...numbers], 'numbers')
+            const arr = numbers.map(number => number * 2)
+            return arr
+        }
+
+        // concatenando
+        console.log(multiply(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+        // merge objetos React
+        object1 = {
+            name: "object1",
+            lastName: "aashahd"
+        };
+
+        object2 = {
+            name: "object2",
+            // ...object1,
+            color: "red"
+        };
+        joinObjects = {
+            ...object1,
+            ...object2
+        };
+        console.log("objects", joinObjects);
+    </script>
+</body>
+
+</html>
